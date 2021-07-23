@@ -2,6 +2,7 @@
 import { defineComponent, h, KeepAlive } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 export default defineComponent({
+  name: "RouteView",
   setup () {
     const $route = useRoute()
     return () => {

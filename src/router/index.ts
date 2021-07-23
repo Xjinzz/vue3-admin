@@ -1,15 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/components/HelloWorld.vue'
 import Found from '@/views/Found.vue'
+import RouteView from '@/layout/RouteView.vue'
 export const constantRoutes:any = [
 	{
 		path: '/',
-		component: Home,
+		component: RouteView,
+		children: [
+			{
+				path: 'home',
+				component: Home,
+			}
+		]
 	},
-	{
-		path: '/home',
-		component: Home,
-	}, 
 	{
 		path: '/:catchAll(.*)',
 		component: Found

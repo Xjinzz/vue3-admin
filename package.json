@@ -2,9 +2,9 @@
   "name": "vue-element-admin",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host --mode devlopment",
+    "dev": "vite --host --port 8666 --mode devlopment",
     "build": "vue-tsc --noEmit && vite build --mode preview",
-    "serve": "vite preview --host --mode devlopment"
+    "serve": "vite preview --port 8666 --host --mode devlopment"
   },
   "dependencies": {
     "element-plus": "^1.0.2-beta.55",

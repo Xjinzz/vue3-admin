@@ -15,14 +15,24 @@
     "sourceMap": false,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "paths": {
       "@/*": [
         "src/*"
       ]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "sever/**/*.ts",
+    "sever/**/*.js",
+  ],
   "exclude": [
     "node_modules"
   ]
