@@ -2,12 +2,13 @@
   "name": "vue-element-admin",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview --host"
+    "dev": "vite --host --mode devlopment",
+    "build": "vue-tsc --noEmit && vite build --mode preview",
+    "serve": "vite preview --host --mode devlopment"
   },
   "dependencies": {
     "element-plus": "^1.0.2-beta.55",
+    "mockjs": "^1.1.0",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "path-browserify": "^1.0.1",
@@ -24,6 +25,7 @@
     "sass": "^1.32.8",
     "typescript": "^4.3.2",
     "vite": "^2.4.3",
+    "vite-plugin-mock": "^2.9.3",
     "vite-plugin-svg-sprite-component": "^1.0.8",
     "vue-tsc": "^0.0.24"
   }
