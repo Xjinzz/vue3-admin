@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import { RouteRecordRaw } from 'vue-router'
 import Home from '@/components/HelloWorld.vue'
-const routes = [
+import Found from '@/views/Found.vue'
+export const constantRoutes:any = [
 	{
 		path: '/',
 		component: Home,
@@ -9,17 +9,20 @@ const routes = [
 	{
 		path: '/home',
 		component: Home,
+	}, 
+	{
+		path: '/:catchAll(.*)',
+		component: Found
 	}
 ]
-export const constantRoutes:any = routes
-const _router = () => createRouter({
+const _createRouter = () => createRouter({
   history: createWebHashHistory(),
   scrollBehavior: () => ({ top: 0 }),
   routes: constantRoutes
 })
 
-let router = _router()
+let router = _createRouter()
 export const resetRouter = () => {
-  router = _router()
+  router = _createRouter()
 }
 export default router
