@@ -16,7 +16,7 @@
         <el-form-item label="验证码">
           <div class="flex">
             <el-row class="auth-flex-width">
-              <el-input placeholder="请输入验证码" v-model="formValue.captcha"/>
+              <el-input placeholder="请输入验证码" v-model="formValue.captcha" style="width:100%"/>
             </el-row>
             <captcha height="40" width="120"/>
           </div>
