@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/components/HelloWorld.vue'
 import Found from '@/views/Found.vue'
 import RouteView from '@/layout/RouteView.vue'
+import Login from '@/views/login/index.vue'
 export const constantRoutes:any = [
 	{
 		path: '/',
@@ -12,6 +13,10 @@ export const constantRoutes:any = [
 				component: Home,
 			}
 		]
+	},
+	{
+		path: '/login',
+		component: Login
 	},
 	{
 		path: '/:catchAll(.*)',
