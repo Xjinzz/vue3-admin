@@ -9,7 +9,7 @@ export const constantRoutes:any = [
 		component: RouteView,
 		children: [
 			{
-				path: 'home',
+				path: '/home',
 				component: Home,
 			}
 		]

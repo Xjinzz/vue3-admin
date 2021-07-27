@@ -25,7 +25,7 @@ export default defineComponent({
       default: ''
     }
   },
-  setup (props, context) {
+  setup (props, { emit }) {
     const captcha = ref()
     const draw = () => {
       const ctx = captcha.value.getContext('2d')
@@ -33,7 +33,7 @@ export default defineComponent({
       ctx.fillRect(0, 0, props.width, props.height)
 
       // 渲染文字
-      const value:string|number = props.modelValue || createCaptcha(4)
+      const value:string|number = createCaptcha(4)
       for(let i = 0; i < String(value).length; i++) {
         const fontSize:number = randomNum(18, 40)
         const deg:number = randomNum(-30, 30)
@@ -65,6 +65,8 @@ export default defineComponent({
         ctx.fillStyle = randomColor(150, 200)
         ctx.fill()
       }
+
+      emit('update:modelValue', value)
     }
     onMounted(() => {
       draw()

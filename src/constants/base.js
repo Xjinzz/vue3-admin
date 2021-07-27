@@ -1,6 +1,6 @@
 export default {
   FORM: {
-    labelWidth: '110px',
+    labelWidth: '100px',
     labelPosition: 'right'
   }
 }
