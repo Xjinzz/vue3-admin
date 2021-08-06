@@ -22,6 +22,11 @@ export function useMessage (message: string ):message {
   }
 }
 
+export function useSuccessMessage (message: string) {
+  const messageHook:message = useMessage(message)
+  messageHook.success()
+}
+
 export function useInfoMessage (message: string) {
   const messageHook:message = useMessage(message)
   messageHook.info()

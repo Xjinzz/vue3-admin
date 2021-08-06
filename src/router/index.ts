@@ -1,19 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '@/components/HelloWorld.vue'
 import Found from '@/views/Found.vue'
-import RouteView from '@/layout/RouteView.vue'
+// import RouteView from '@/layout/RouteView.vue'
+import PageView from '@/layout/PageView.vue'
 import Login from '@/views/login/index.vue'
 export const constantRoutes:any = [
-	{
-		path: '/',
-		component: RouteView,
-		children: [
-			{
-				path: '/home',
-				component: Home,
-			}
-		]
-	},
 	{
 		path: '/login',
 		component: Login

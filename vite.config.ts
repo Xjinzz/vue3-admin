@@ -22,6 +22,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        '@comp': path.resolve(__dirname, 'src/components'),
         'path': 'path-browserify'
       }
     }
